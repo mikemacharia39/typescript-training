@@ -38,7 +38,7 @@ var Circle = /** @class */ (function (_super) {
         return _super.prototype.getInfo.call(this) + " radius = ".concat(this._radius);
     };
     Circle.prototype.area = function () {
-        return 3.14 * this._radius * this._radius;
+        return Math.PI * Math.pow(this._radius, 2);
     };
     return Circle;
 }(Shape_1.Shape));
