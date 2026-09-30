@@ -24,3 +24,9 @@ Structural Types
 ## TypeScript vs JavaScript
 TypeScript is a superset of JavaScript
 TypeScript can be compiled to different versions of JavaScript i.e. ECMAScript versions
+
+## TypeScript commands
+tsc -version   # check version
+tsc --init     # generated a tsconfig.json file
+tsc            # generates .js files from .ts files (Compiles the current project (tsconfig.json in the working directory.))
+tsc -watch     # detects for new file changes
