@@ -26,7 +26,9 @@ TypeScript is a superset of JavaScript
 TypeScript can be compiled to different versions of JavaScript i.e. ECMAScript versions
 
 ## TypeScript commands
-tsc -version   # check version
-tsc --init     # generated a tsconfig.json file
-tsc            # generates .js files from .ts files (Compiles the current project (tsconfig.json in the working directory.))
-tsc -watch     # detects for new file changes
+tsc -version                    # check version
+tsc --init                      # generated a tsconfig.json file
+tsc                             # generates .js files from .ts files (Compiles the current project (tsconfig.json in the working directory.))
+tsc -watch                      # detects for new file changes
+tsc <path-to-ts-file>/<file.ts> # compiles the actual typescript file
+tsc --outdir disc               # defines the directory to put the compiled files in. Can be defaulted in .tsconfig.json file 
