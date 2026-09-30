@@ -35,3 +35,14 @@ tsc --outdir disc               # defines the directory to put the compiled file
 
 ## Setting up webpack for typescript
 Webpack takes care of compiling our typescript and our localserver and tracking our changes
+
+## Project setup fixes and notes
+
+### Dependency versions
+- `webpack-cli` must be pinned to `^5.x` — version 7+ requires `webpack-dev-server@^5` or `^6`, which conflicts with older setups
+- `webpack-dev-server` was upgraded from `^4.x` to `^5.x` to match `webpack-cli@5`
+- `typescript` was upgraded from `4.7.4` to `^5.4.0` because newer versions of `@types/node` (pulled in as a transitive dependency) use TypeScript 5.2+ syntax (`using` keyword). TypeScript 4.x cannot parse this, causing build errors even with `skipLibCheck: true`
+
+### webpack.config.js
+- `mode: 'development'` was added to suppress the webpack mode warning and enable development defaults (readable output, source maps etc.)
+- `devServer.static: './'` was added so webpack-dev-server serves `index.html` from the project root. Without this it defaults to looking in a `public/` folder, resulting in a `Cannot GET /` error at localhost:3000
