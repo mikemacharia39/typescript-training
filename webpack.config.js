@@ -1,4 +1,5 @@
 module.exports = {
+    mode: 'development',
     entry: './src/app.ts',
     output: {
         filename: 'app.js',
@@ -17,5 +18,6 @@ module.exports = {
     },
     devServer: {
         port: 3000,
+        static: './',
     }
 };
