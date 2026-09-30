@@ -32,3 +32,6 @@ tsc                             # generates .js files from .ts files (Compiles t
 tsc -watch                      # detects for new file changes
 tsc <path-to-ts-file>/<file.ts> # compiles the actual typescript file
 tsc --outdir disc               # defines the directory to put the compiled files in. Can be defaulted in .tsconfig.json file 
+
+## Setting up webpack for typescript
+Webpack takes care of compiling our typescript and our localserver and tracking our changes
